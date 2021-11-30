@@ -113,6 +113,8 @@ nav {
 #main-content{
     transition: 0.5s;
     padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* #open:checked ~.main-content {
@@ -123,99 +125,80 @@ nav {
 
 /* 2.1. Card */
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.counter-up{
+  background: url("/res/html-color-codes-color-tutorials-hero.jpg") no-repeat;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Chen content vao truoc */
+.counter-up::before{
+  position:absolute;
+  content:"";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  background: rgba(0,0,0,0,8);
+}
+
+.counter-up .content{
+  position: relative;
+  z-index: 2;
+  display:flex;
+  width:100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .box {
+  width: calc(25% - 30px);
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  flex-direction: column;
+}
+
+.content .box .icon {
+  font-size : 48px;
+  color : #e6e6e6;
+}
+
+.content .box .counter {
+  font-size : 50px;
+  color : #f2f2f2;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.content .box .card-text{
+  color: #ccc;
+  font-weight:400;
+}
+
+@media (max-width: 1200px){
+  .counter-up{
+    padding : 50px 50px 0 50px;
   }
-  
-  .card {
-    margin: 20px;
-    padding: 20px;
-    width: 500px;
-    min-height: 200px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
+  .content .box {
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
   }
-  
-  .card:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01);
-  }
-  
-  .card__link,
-  .card__exit,
-  .card__icon {
-    position: relative;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .card__link::after {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    content: "";
-    width: 0%;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.6);
-    transition: all 0.5s;
-  }
-  
-  .card__link:hover::after {
+}
+
+@media (max-width: 800px){
+  .content .box {
     width: 100%;
   }
-  
-  .card__exit {
-    grid-row: 1/2;
-    justify-self: end;
-  }
-  
-  .card__icon {
-    grid-row: 2/3;
-    font-size: 30px;
-  }
-  
-  .card__title {
-    grid-row: 3/4;
-    font-weight: 400;
-    color: #ffffff;
-  }
-  
-  .card__apply {
-    grid-row: 4/5;
-    align-self: center;
-  }
-  
-  /* CARD BACKGROUNDS */
-  
-  .card-1 {
-    background: radial-gradient(#1fe4f5, #3fbafe);
-  }
-  
-  .card-2 {
-    background: radial-gradient(#fbc1cc, #fa99b2);
-  }
-  
-  .card-3 {
-    background: radial-gradient(#76b2fe, #b69efe);
-  }
-  
-  .card-4 {
-    background: radial-gradient(#60efbc, #58d5c9);
-  }
-  
-  .card-5 {
-    background: radial-gradient(#f588d8, #c0a3e5);
-  }
-  
-  /* RESPONSIVE */
-  
-  @media (max-width: 1600px) {
-    .cards {
-      justify-content: center;
-    }
-  }
+}
+
