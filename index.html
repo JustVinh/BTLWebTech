@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href ="assest/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" name="open" id="open">
+        <label for="open" class="open">
+            <i onclick="openOrCloseMenu()" class="fas fa-bars"></i>
+        </label>
+        <div class="titleContainer">
+            <h1 style="display: inline-block;">Chưa thống nhất tên trang</h1>
+            <!-- <i id="profileIcon" style="float:right" class="far fa-user-circle"></i> -->
+            <img id="profileIcon" style="float:right" src="res/account -avatar -profile-human-man-user - 30448. png">
+        </div>
+        <!-- Sidebar menu -->
+        <div class="menu">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo.png" alt="">
+                </a>
+            </div>
+          <ul>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-home"></i></span>
+                      Thống kê
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-address-card"></i></span>
+                      About
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-cog"></i></span>
+                      Settings
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-address-book"></i></span>
+                      Contact
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-comments-alt-dollar"></i></span>
+                      Feedback
+                  </a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <div id="main-content">
+        <!-- Card -->
+        <div class="cards">
+            <div class="card card-1">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+            <div class="card card-2">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+            <div class="card card-3">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Ut enim ad minim veniam.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+            <div class="card card-4">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Quis nostrud exercitation ullamco laboris nisi.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+            <div class="card card-5">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Ut aliquip ex ea commodo consequat. Duis aute irure dolor.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+            <div class="card card-1">
+              <div class="card__icon"><i class="fas fa-bolt"></i></div>
+              <p class="card__exit"><i class="fas fa-times"></i></p>
+              <h2 class="card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+              <p class="card__apply">
+                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+              </p>
+            </div>
+          </div>
+    </div>
+</body>
+<script>
+    let isOpenMenu =0;
+
+    // Click menu bar
+    let openOrCloseMenu = ()   => {
+        if(isOpenMenu === 0){
+            document.getElementById("main-content").style.marginLeft = "300px";
+            isOpenMenu = 1;
+        }else{
+            document.getElementById("main-content").style.marginLeft = "0px";
+            isOpenMenu = 0;
+        }
+    }
+</script>
+</html>
