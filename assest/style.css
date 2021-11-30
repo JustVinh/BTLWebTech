@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: sans-serif; 
     background-color: white;
     height: 100vh;  
@@ -102,13 +102,17 @@ ul li a{
 
 
 nav {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: white;
     border-style: ridge;
     border-width: 0 0 3px 0;
+    z-index: 100;
 }
 
 #main-content{
     transition: 0.5s;
+    padding-top: 100px;
 }
 
 /* #open:checked ~.main-content {
